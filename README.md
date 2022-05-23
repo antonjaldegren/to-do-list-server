@@ -29,8 +29,6 @@ $ PORT=[YOUR_PORT] node server.js
 
 ## GET - Get all todos
 
----
-
 ### Request
 
 ```
@@ -62,8 +60,6 @@ fetch("http://localhost:4000/todos")
 
 ## GET - Get single todo
 
----
-
 ### Request
 
 ```
@@ -86,8 +82,6 @@ fetch("http://localhost:4000/todos/[ID]")
 ```
 
 ## POST - Add new todo
-
----
 
 The following key must be provided in the JSON object when the request is sent:
 
@@ -120,8 +114,6 @@ fetch("http://localhost:4000/todos", {
 ```
 
 ## PUT - Edit todo (full)
-
----
 
 **ALL** of the following keys must be provided in the JSON object when the request is sent:
 
@@ -156,8 +148,6 @@ fetch("http://localhost:4000/todos/[ID]", {
 
 ## PATCH - Edit todo (partial)
 
----
-
 **ONE OR MORE** of the following keys must be provided in the JSON object when the request is sent:
 
 -   `"title"` (value must be of type `string` and have a length > 0)
@@ -189,8 +179,6 @@ fetch("http://localhost:4000/todos/[ID]", {
 ```
 
 ## DELETE - Delete todo
-
----
 
 ### Request
 
