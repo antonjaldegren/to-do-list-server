@@ -24,7 +24,7 @@ $ PORT=[YOUR_PORT] node server.js
 
 -   In examples where ID is required - replace `[ID]` in the URL with the ID string of an existing todo.
 -   All data must be sent in JSON format as specified in each section below.
--   Incomplete or invalid data (key names, value types and length requirements other than those defined below) will result in a `400: Bad request` response from the server.
+-   Incomplete or invalid data (caused by key names, value types, and lengths that does not meet the requirements defined below) will result in a `400: Bad request` response from the server.
 -   Superfluous data sent in addition to valid data will not trigger an error, but will be ignored by the server.
 
 ## GET - Get all todos
