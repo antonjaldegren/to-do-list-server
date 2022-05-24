@@ -95,7 +95,6 @@ fetch("http://localhost:4000/todos", {
 	headers: { "Content-Type": "application/json" },
 	body: JSON.stringify({
 		title: "Do the laundry",
-		isCompleted: false,
 	}),
 })
 ```
