@@ -10,19 +10,21 @@ Prerequisites:
 
 Run the following command in the root folder to start the server:
 
-```
+```shell
 $ node server.js
 ```
 
-The server is preconfigured to run on http://localhost:4000. To use another port, run the following command (replacing `[YOUR_PORT]` with your desired port number):
+The server is preconfigured to run on http://localhost:4000. To use another port, run the following command (replacing `:yourPort` with your desired port number):
 
+```shell
+$ PORT=:yourPort node server.js
 ```
-$ PORT=[YOUR_PORT] node server.js
-```
+
+When the server is started for the first time, a `data.json` file will be created in the root folder to store the data sent to the server.
 
 ### Client
 
--   In examples where ID is required - replace `[ID]` in the URL with the ID string of an existing todo.
+-   In examples where ID is required - replace `:id` in the URL with the ID string of an existing todo. Passing an ID which does not have a match in the database will result in a `404: Not found` response from the server.
 -   All data must be sent in JSON format as specified in each section below.
 -   Incomplete or invalid data (caused by key names, value types, and lengths that does not meet the requirements defined below) will result in a `400: Bad request` response from the server.
 -   Superfluous data sent in addition to valid data will not trigger an error, but will be ignored by the server.
@@ -62,7 +64,7 @@ fetch("http://localhost:4000/todos");
 ### Request
 
 ```js
-fetch("http://localhost:4000/todos/[ID]");
+fetch("http://localhost:4000/todos/:id");
 ```
 
 ### Response
@@ -121,7 +123,7 @@ fetch("http://localhost:4000/todos", {
 ### Request
 
 ```js
-fetch("http://localhost:4000/todos/[ID]", {
+fetch("http://localhost:4000/todos/:id", {
 	method: "PUT",
 	headers: { "Content-Type": "application/json" },
 	body: JSON.stringify({
@@ -154,7 +156,7 @@ fetch("http://localhost:4000/todos/[ID]", {
 ### Request
 
 ```js
-fetch("http://localhost:4000/todos/[ID]", {
+fetch("http://localhost:4000/todos/:id", {
 	method: "PATCH",
 	headers: { "Content-Type": "application/json" },
 	body: JSON.stringify({
@@ -181,7 +183,7 @@ fetch("http://localhost:4000/todos/[ID]", {
 ### Request
 
 ```js
-fetch("http://localhost:4000/todos/[ID]", {
+fetch("http://localhost:4000/todos/:id", {
 	method: "DELETE",
 });
 ```
