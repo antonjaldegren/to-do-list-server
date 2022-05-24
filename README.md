@@ -49,7 +49,6 @@ fetch("http://localhost:4000/todos");
 		"title": "Do the dishes",
 		"isCompleted": false
 	},
-	/*...*/
 	{
 		"id": "32c7e5cba83703eed1b8e84e",
 		"title": "Clean the gutters",
