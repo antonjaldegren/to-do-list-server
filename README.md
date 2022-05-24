@@ -31,8 +31,8 @@ $ PORT=[YOUR_PORT] node server.js
 
 ### Request
 
-```
-fetch("http://localhost:4000/todos")
+```js
+fetch("http://localhost:4000/todos");
 ```
 
 ### Response
@@ -42,16 +42,16 @@ fetch("http://localhost:4000/todos")
 
 **JSON data:**
 
-```
+```json
 [
 	{
-		"id": 41e091e58b95ae961aeb69bb,
+		"id": "41e091e58b95ae961aeb69bb",
 		"title": "Do the dishes",
 		"isCompleted": false
 	},
-  /*...*/
+	/*...*/
 	{
-		"id": 32c7e5cba83703eed1b8e84e,
+		"id": "32c7e5cba83703eed1b8e84e",
 		"title": "Clean the gutters",
 		"isCompleted": true
 	}
@@ -62,8 +62,8 @@ fetch("http://localhost:4000/todos")
 
 ### Request
 
-```
-fetch("http://localhost:4000/todos/[ID]")
+```js
+fetch("http://localhost:4000/todos/[ID]");
 ```
 
 ### Response
@@ -73,9 +73,9 @@ fetch("http://localhost:4000/todos/[ID]")
 
 **JSON data:**
 
-```
+```json
 {
-	"id": 91fe9693983d8a4a778e8d3b,
+	"id": "91fe9693983d8a4a778e8d3b",
 	"title": "Walk the dog",
 	"isCompleted": false
 }
@@ -89,14 +89,14 @@ The following key must be provided in the JSON object when the request is sent:
 
 ### Request
 
-```
+```js
 fetch("http://localhost:4000/todos", {
 	method: "POST",
 	headers: { "Content-Type": "application/json" },
 	body: JSON.stringify({
 		title: "Do the laundry",
 	}),
-})
+});
 ```
 
 ### Response
@@ -106,7 +106,7 @@ fetch("http://localhost:4000/todos", {
 
 **JSON data:**
 
-```
+```json
 {
 	"success": "Item successfully added"
 }
@@ -121,7 +121,7 @@ fetch("http://localhost:4000/todos", {
 
 ### Request
 
-```
+```js
 fetch("http://localhost:4000/todos/[ID]", {
 	method: "PUT",
 	headers: { "Content-Type": "application/json" },
@@ -129,7 +129,7 @@ fetch("http://localhost:4000/todos/[ID]", {
 		title: "Mow the lawn",
 		isCompleted: false,
 	}),
-})
+});
 ```
 
 ### Response
@@ -139,7 +139,7 @@ fetch("http://localhost:4000/todos/[ID]", {
 
 **JSON data:**
 
-```
+```json
 {
 	"success": "Item successfully edited"
 }
@@ -154,14 +154,14 @@ fetch("http://localhost:4000/todos/[ID]", {
 
 ### Request
 
-```
+```js
 fetch("http://localhost:4000/todos/[ID]", {
 	method: "PATCH",
 	headers: { "Content-Type": "application/json" },
 	body: JSON.stringify({
 		isCompleted: true,
 	}),
-})
+});
 ```
 
 ### Response
@@ -171,7 +171,7 @@ fetch("http://localhost:4000/todos/[ID]", {
 
 **JSON data:**
 
-```
+```json
 {
 	"success": "Item successfully edited"
 }
@@ -181,10 +181,10 @@ fetch("http://localhost:4000/todos/[ID]", {
 
 ### Request
 
-```
+```js
 fetch("http://localhost:4000/todos/[ID]", {
-  method: "DELETE"
-})
+	method: "DELETE",
+});
 ```
 
 ### Response
@@ -194,7 +194,7 @@ fetch("http://localhost:4000/todos/[ID]", {
 
 **JSON data:**
 
-```
+```json
 {
 	"success": "Item successfully deleted"
 }
